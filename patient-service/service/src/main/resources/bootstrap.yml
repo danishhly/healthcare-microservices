@@ -1,6 +1,0 @@
-# patient-service/src/main/resources/bootstrap.yml
-spring:
-  application:
-    name: patient-service # This name MUST match the config file (step 3C)
-  config:
-    import: optional:configserver:http://localhost:8888
