@@ -1,19 +1,7 @@
 version: '3.8'
 
 services:
-  # 1. Service Discovery (Eureka)
-  eureka-server:
-    # We will build this service from a Dockerfile later
-    image: healthcare-microservices/eureka-server:latest
-    container_name: eureka-server
-    build:
-      context: ./eureka-server
-      dockerfile: Dockerfile
-    ports:
-      - "8761:8761"
-    environment:
-      # Ensure all services can find the Eureka Server via its service name
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+
 
   # 2. Central Configuration (Config Server)
   config-server:
