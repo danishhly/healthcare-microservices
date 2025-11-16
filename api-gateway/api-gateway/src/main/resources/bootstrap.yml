@@ -1,5 +1,13 @@
 spring:
   application:
-    name: api-gateway # This name matches 'api-gateway.yml' in config-repo
+    name: api-gateway
   config:
     import: "optional:configserver:http://localhost:8888"
+
+# Move Eureka config here from application.yml
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
