@@ -1,0 +1,36 @@
+# config-repo/application.yml (Global Configuration)
+
+# Eureka Client Setup (All services will use this)
+eureka:
+  client:
+    serviceUrl:
+      # Use the Docker service name for communication within the network
+      defaultZone: http://eureka-server:8761/eureka/
+  instance:
+    # Use random value to ensure unique instances during local testing
+    instance-id: ${spring.application.name}:${instance_id:${random.value}}
+    # Tells Eureka to register the IP, which is useful in Docker
+    prefer-ip-address: true
+
+# Database Connection Defaults
+spring:
+  datasource:
+    # Use the Docker service name for the database connection
+    url: jdbc:postgresql://postgres:5432/health_db
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update # Good for development; change to 'none' for production
+    show-sql: true
+
+# Actuator Setup for Monitoring
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

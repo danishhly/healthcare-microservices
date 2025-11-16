@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  # 1. Service Discovery (Eureka)
+  eureka-server:
+    # We will build this service from a Dockerfile later
+    image: healthcare-microservices/eureka-server:latest
+    container_name: eureka-server
+    build:
+      context: ./eureka-server
+      dockerfile: Dockerfile
+    ports:
+      - "8761:8761"
+    environment:
+      # Ensure all services can find the Eureka Server via its service name
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+
+  # 2. Central Configuration (Config Server)
+  config-server:
+    # Using a common Spring Cloud base image for simplicity now
+    image: springcloud/config-server:3.1.5
+    container_name: config-server
+    ports:
+      - "8888:8888"
+    environment:
+      SPRING_PROFILES_ACTIVE: native
+      SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS: file:///config-repo/
+    volumes:
+      - ./config-repo:/config-repo # Mount local folder to container
+    depends_on:
+      - eureka-server
+
+  # 3. Relational Database (PostgreSQL)
+  postgres:
+    image: postgres:15-alpine
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: health_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Persist data across restarts
+
+volumes:
+  postgres_data:
