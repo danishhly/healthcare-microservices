@@ -1,0 +1,18 @@
+server:
+  port: 8080 # The main entry point for your application
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true # Use 'patient-service' instead of 'PATIENT-SERVICE'
+      routes:
+        # Route definition for patient-service
+        - id: patient-service-route
+          uri: lb://patient-service # 'lb' means load-balanced (via Eureka)
+          predicates:
+            - Path=/api/v1/patients/**
+          filters:
+            - StripPrefix=2 # Removes /api/v1
