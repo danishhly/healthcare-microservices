@@ -2,19 +2,12 @@ server:
   port: 8080
 
 spring:
-  application:
-    name: api-gateway
-
-  config:
-    import: "optional:configserver:http://localhost:8888"
-
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
           lowerCaseServiceId: true
-
       routes:
         - id: patient-service-route
           uri: lb://patient-service
@@ -22,9 +15,3 @@ spring:
             - Path=/api/v1/patients/**
           filters:
             - StripPrefix=2
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    prefer-ip-address: true

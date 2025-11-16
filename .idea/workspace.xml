@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce707771-291b-4772-8634-3869b414402a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api-gateway/api-gateway/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-repo/api-gateway.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-repo/api-gateway.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/patient-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/test/java/com/example/PatientServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/test/java/com/example/service/ServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,16 +60,5 @@
       <updated>1763292168061</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/patient-service/src/main/java/com/example/PatientServiceApplication.java</url>
-          <line>5</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
