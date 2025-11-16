@@ -1,4 +1,4 @@
-package com.example.api-gateway;
+package com.example;
 
 
 import org.springframework.boot.SpringApplication;
