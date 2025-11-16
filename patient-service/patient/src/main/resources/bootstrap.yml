@@ -1,5 +1,0 @@
-spring:
-  application:
-    name: patient-service # This name MUST match your config file 'patient-service.yml'
-  config:
-    import: "optional:configserver:http://localhost:8888" # The Config Server address
