@@ -18,9 +18,6 @@ import static org.hibernate.Hibernate.map;
 public class PatientController {
     private final PatientService patientService;
 
-    public PatientController(PatientService patientService) {
-        this.patientService = patientService;
-    }
 
     @GetMapping
     public ResponseEntity<List<Patient>> getAllPatients() {
@@ -42,7 +39,7 @@ public class PatientController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletePatient(@PathVariable Long id) {
-        patientService.deleteById();
+        patientService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
 }
