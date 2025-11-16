@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: patient-service # This name matches 'patient-service.yml' in config-repo
+  config:
+    import: "optional:configserver:http://localhost:8888" # The config server address

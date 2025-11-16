@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: api-gateway # This name matches 'api-gateway.yml' in config-repo
+  config:
+    import: "optional:configserver:http://localhost:8888"
