@@ -1,0 +1,4 @@
+# config-repo/patient-service.yml (Specific Configuration)
+server:
+  port: 0 # Use 0 to let Spring choose a random available port.
+  # Essential when running multiple instances locally.
