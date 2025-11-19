@@ -1,39 +1,67 @@
-# Global defaults for all services that connect to the config server
+version: '3.8'
 
-# --- Eureka Configuration ---
-# All services should register with Eureka
-eureka:
-  client:
-    serviceUrl:
-      # Use localhost here for services running from your IDE
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    instance-id: ${spring.application.name}:${instance_id:${random.value}}
-    prefer-ip-address: true
+services:
+  eureka-server:
+    build: ./eureka-server
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    environment:
+      - EUREKA_CLIENT_REGISTER_WITH_EUREKA=false
+      - EUREKA_CLIENT_FETCH_REGISTRY=false
 
-# --- Database Configuration ---
-# Default database connection for services that need it
-spring:
-  datasource:
-    # 'postgres' is the service name from your docker-compose.yml
-    url: jdbc:postgresql://localhost:5432/health_db
-    username: user
-    password: password
-    driver-class-name: org.postgresql.Driver
-  jpa:
-    hibernate:
-      ddl-auto: update # Good for development
-    show-sql: true
-    properties:
-      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+  config-server:
+    build: ./config-server
+    container_name: config-server
+    depends_on:
+      - eureka-server
+    environment:
+      SPRING_PROFILES_ACTIVE: native
+      SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS: file:///config-repo/
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./config-repo:/config-repo
 
-# --- Actuator Configuration ---
-# Expose all actuator endpoints for monitoring
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*" # Exposes all endpoints (health, metrics, prometheus, etc.)
-  endpoint:
-    health:
-      show-details: always
+  postgres:
+    image: postgres:15-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: health_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  patient-service:
+    build: ./patient-service
+    container_name: patient-service
+    depends_on:
+      - postgres
+      - config-server
+      - eureka-server
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/health_db
+      SPRING_DATASOURCE_USERNAME: user
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_PROFILES_ACTIVE: default
+    ports:
+      - "8081:8080"
+
+  api-gateway:
+    build: ./api-gateway/api-gateway
+    container_name: api-gateway
+    depends_on:
+      - patient-service
+      - config-server
+      - eureka-server
+    environment:
+      SPRING_PROFILES_ACTIVE: default
+    ports:
+      - "8080:8080"
+
+volumes:
+  postgres_data:
