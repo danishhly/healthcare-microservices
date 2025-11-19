@@ -12,12 +12,12 @@ spring:
       server:
         native:
           # ? IMPORTANT: Update this path to the ABSOLUTE path on your Ubuntu machine
-          search-locations: file:///home/danish/Downloads/spring-projects/healthcare-microservices/config-repo/
+          search-locations: ${SEARCH_LOCATION:file:///home/danish/Downloads/spring-projects/healthcare-microservices/config-repo/}
 
 # Config server also registers itself with Eureka
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/ # Use localhost for its own registration
-  instance:
-    instance-id: ${spring.application.name}:${instance_id:${random.value}}
+    instance:
+      instance-id: ${spring.application.name}:${instance_id:${random.value}}

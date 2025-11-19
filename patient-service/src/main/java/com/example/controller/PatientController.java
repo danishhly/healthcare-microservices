@@ -2,13 +2,14 @@ package com.example.controller;
 
 import com.example.model.Patient;
 import com.example.service.PatientService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
+// REMOVED: Unused static import
 
 @RestController
 @RequestMapping("/patients")
@@ -29,23 +30,9 @@ public class PatientController {
     }
 
     @PostMapping
-    public ResponseEntity<Patient> createPatient(@Valid @RequestBody Patient patient) {
+    public ResponseEntity<Patient> createPatient(@RequestBody Patient patient) {
         Patient savedPatient = patientService.save(patient);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedPatient);
-    }
-
-    @PutMapping("/{id}")
-    public ResponseEntity<Patient> updatePatient(@PathVariable Long id, @Valid @RequestBody Patient patientDetails) {
-        return patientService.updatePatient(id, patientDetails)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
-    }
-
-    @PatchMapping("/{id}")
-    public ResponseEntity<Patient> partialUpdatePatient(@PathVariable Long id, @RequestBody Patient patientDetails) {
-        return patientService.partialUpdatePatient(id, patientDetails)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
     }
 
     @DeleteMapping("/{id}")
