@@ -3,6 +3,23 @@ server:
   servlet:
     context-path: /
 
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/health_db
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+  sql:
+    init:
+      mode: never
+
 logging:
   level:
     org.springframework.web: INFO
