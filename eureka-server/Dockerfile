@@ -8,5 +8,5 @@ RUN mvn -B -DskipTests clean package
 FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 COPY --from=build /app/target/*.jar eureka-server.jar
-EXPOSE 8761
+EXPOSE 8762
 ENTRYPOINT ["java", "-jar", "eureka-server.jar"]

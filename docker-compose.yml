@@ -5,7 +5,7 @@ services:
     build: ./eureka-server
     container_name: eureka-server
     ports:
-      - "8761:8761"
+      - "8762:8762"
     environment:
       - EUREKA_CLIENT_REGISTER_WITH_EUREKA=false
       - EUREKA_CLIENT_FETCH_REGISTRY=false
@@ -18,7 +18,7 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: native
       SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS: file:///config-repo/
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8762/eureka/
     ports:
       - "8888:8888"
     volumes:
@@ -61,7 +61,7 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: default
     ports:
-      - "8080:8080"
+      - "8085:8080"
 
 volumes:
   postgres_data:
