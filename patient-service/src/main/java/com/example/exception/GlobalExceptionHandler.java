@@ -2,7 +2,7 @@ package com.example.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.ErrorResponse;
+// REMOVED: import org.springframework.web.ErrorResponse; <-- This was causing the conflict
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -26,7 +26,7 @@ public class GlobalExceptionHandler {
         ErrorResponse errorResponse = new ErrorResponse(
                 HttpStatus.BAD_REQUEST.value(),
                 "Validation failed",
-                errors.toString(),
+                errors.toString(), // Converts the map of errors to a string for the details field
                 LocalDateTime.now()
         );
 
