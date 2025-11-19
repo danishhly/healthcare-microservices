@@ -2,42 +2,51 @@ package com.example.controller;
 
 import com.example.model.Patient;
 import com.example.service.PatientService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-// REMOVED: Unused static import
-
 @RestController
 @RequestMapping("/patients")
 @RequiredArgsConstructor
+@Validated
 public class PatientController {
+
     private final PatientService patientService;
 
     @GetMapping
-    public ResponseEntity<List<Patient>> getAllPatients() {
-        return ResponseEntity.ok(patientService.findAll());
+    public List<Patient> getAllPatients() {
+        return patientService.findAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Patient> getPatientById(@PathVariable Long id) {
-        return patientService.findById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+    public Patient getPatientById(@PathVariable Long id) {
+        return patientService.findByIdOrThrow(id);
     }
 
     @PostMapping
-    public ResponseEntity<Patient> createPatient(@RequestBody Patient patient) {
-        Patient savedPatient = patientService.save(patient);
-        return ResponseEntity.status(HttpStatus.CREATED).body(savedPatient);
+    @ResponseStatus(HttpStatus.CREATED)
+    public Patient createPatient(@Valid @RequestBody Patient patient) {
+        return patientService.save(patient);
+    }
+
+    @PutMapping("/{id}")
+    public Patient updatePatient(@PathVariable Long id, @Valid @RequestBody Patient patient) {
+        return patientService.update(id, patient);
+    }
+
+    @PatchMapping("/{id}")
+    public Patient partialUpdatePatient(@PathVariable Long id, @RequestBody Patient patient) {
+        return patientService.partialUpdate(id, patient);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletePatient(@PathVariable Long id) {
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deletePatient(@PathVariable Long id) {
         patientService.deleteById(id);
-        return ResponseEntity.noContent().build();
     }
 }
