@@ -1,7 +1,9 @@
-
 server:
   port: 0
+  servlet:
+    context-path: /
 
-# All other properties (like spring.config.import,
-# spring.application.name, and eureka.client.serviceUrl)
-# should ONLY be in bootstrap.yml
+logging:
+  level:
+    org.springframework.web: INFO
+    com.example: DEBUG

@@ -1,7 +1,15 @@
 version: '3.8'
 
 services:
-
+  # 1. Service Discovery (Eureka Server) - ADDED THIS MISSING SERVICE
+  eureka-server:
+    build: ./eureka-server
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    environment:
+      - EUREKA_CLIENT_REGISTER_WITH_EUREKA=false
+      - EUREKA_CLIENT_FETCH_REGISTRY=false
 
   # 2. Central Configuration (Config Server)
   config-server:
@@ -13,6 +21,8 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: native
       SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS: file:///config-repo/
+      # FIXED: Use the service name 'eureka-server' instead of 'localhost'
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
     volumes:
       - ./config-repo:/config-repo # Mount local folder to container
     depends_on:
