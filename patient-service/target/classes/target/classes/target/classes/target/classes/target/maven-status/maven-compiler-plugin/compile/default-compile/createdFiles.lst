@@ -1,5 +1,0 @@
-com/example/model/Patient.class
-com/example/repository/PatientRepository.class
-com/example/service/PatientService.class
-com/example/PatientServiceApplication.class
-com/example/controller/PatientController.class

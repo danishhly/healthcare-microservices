@@ -1,11 +1,10 @@
 spring:
   application:
     name: patient-service
-
-  config:
-    import: "optional:configserver:http://localhost:8888"
+  cloud:
+    config:
+      enabled: false
 
 eureka:
   client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+    enabled: false

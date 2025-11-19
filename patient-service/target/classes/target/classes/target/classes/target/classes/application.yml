@@ -1,7 +1,0 @@
-
-server:
-  port: 0
-
-# All other properties (like spring.config.import,
-# spring.application.name, and eureka.client.serviceUrl)
-# should ONLY be in bootstrap.yml

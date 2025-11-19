@@ -6,6 +6,6 @@ RUN mvn -B -DskipTests clean package
 
 FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
-COPY --from=build /app/target/*.jar config-server.jar
-EXPOSE 8888
-ENTRYPOINT ["java", "-jar", "config-server.jar"]
+COPY --from=build /app/target/*.jar patient-service.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "patient-service.jar"]

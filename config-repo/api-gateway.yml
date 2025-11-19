@@ -4,17 +4,29 @@ server:
 spring:
   application:
     name: api-gateway
-
-  config:
-    import: "optional:configserver:http://localhost:8888"
-
+  main:
+    web-application-type: reactive
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
-          lowerCaseServiceId: true
-
+          lower-case-service-id: true
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - PATCH
+              - DELETE
+              - OPTIONS
+            allowCredentials: false
       routes:
         - id: patient-service-route
           uri: lb://patient-service
@@ -22,3 +34,7 @@ spring:
             - Path=/api/v1/patients/**
           filters:
             - StripPrefix=2
+
+logging:
+  level:
+    org.springframework.cloud.gateway: INFO
