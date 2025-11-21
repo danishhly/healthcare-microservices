@@ -1,6 +1,6 @@
 
 server:
-  port: 8888 # The default port for Spring Cloud Config
+  port: 8889 # The default port for Spring Cloud Config
 
 spring:
   application:
