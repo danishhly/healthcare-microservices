@@ -1,10 +1,13 @@
 spring:
   application:
     name: patient-service
-  cloud:
-    config:
-      enabled: false
+  config:
+    # Remove 'optional:' to force the app to wait for the config server
+    import: "configserver:http://localhost:8888"
 
 eureka:
   client:
-    enabled: false
+    serviceUrl:
+      defaultZone: http://eureka-server:8762/eureka/
+  instance:
+    prefer-ip-address: true
