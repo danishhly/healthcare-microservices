@@ -6,6 +6,16 @@ spring:
     driver-class-name: org.h2.Driver
     username: sa
     password: password
+  server:
+    port: 0
+    servlet:
+      context-path: /
+
+  logging:
+    level:
+      org.springframework.web: INFO
+
+
   jpa:
     hibernate:
       ddl-auto: create-drop
