@@ -3,6 +3,8 @@
 
 # Log files
 *.log
+logs/
+*.log.*
 
 # Package Files
 *.jar
@@ -19,6 +21,12 @@ pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
 dependency-reduced-pom.xml
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+# Maven Wrapper (optional - uncomment if you don't want to commit wrapper)
+# mvnw
+# mvnw.cmd
 
 # Eclipse/IntelliJ IDEA
 .settings/
@@ -27,11 +35,86 @@ dependency-reduced-pom.xml
 .idea/
 *.iml
 *.ipr
+*.iws
 out/
+.idea_modules/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# NetBeans
+nbproject/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Spring Boot
+HELP.md
+spring-boot-*.log
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+*.dockerfile.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+application-local.yml
+application-secret.yml
+*.pem
+*.key
+*.crt
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
 
 # Temporary files
 *.swp
-.DS_Store
+*.swo
+*~
+*.tmp
+*.bak
+*.cache
 
 # Application logs
 /tmp/*.log
+/tmp/*.out
+
+# Docker volumes and data
+postgres_data/
+data/
+volumes/
+
+# Test coverage
+.nyc_output/
+coverage/
+*.lcov
+
+# Build artifacts
+build/
+dist/
+bin/
+*.o
+*.so
+*.dylib
+
+# Application specific
+*.pid
+*.seed
+*.pid.lock
