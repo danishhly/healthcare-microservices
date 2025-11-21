@@ -1,67 +1,35 @@
-version: '3.8'
+# Global defaults shared by every service
 
-services:
-  eureka-server:
-    build: ./eureka-server
-    container_name: eureka-server
-    ports:
-      - "8762:8762"
-    environment:
-      - EUREKA_CLIENT_REGISTER_WITH_EUREKA=false
-      - EUREKA_CLIENT_FETCH_REGISTRY=false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://eureka-server:8762/eureka/}
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
-  config-server:
-    build: ./config-server
-    container_name: config-server
-    depends_on:
-      - eureka-server
-    environment:
-      SPRING_PROFILES_ACTIVE: native
-      SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS: file:///config-repo/
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8762/eureka/
-    ports:
-      - "8888:8888"
-    volumes:
-      - ./config-repo:/config-repo
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://postgres:5432/health_db}
+    username: ${SPRING_DATASOURCE_USERNAME:user}
+    password: ${SPRING_DATASOURCE_PASSWORD:password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
-  postgres:
-    image: postgres:15-alpine
-    container_name: postgres
-    environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: health_db
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-
-  patient-service:
-    build: ./patient-service
-    container_name: patient-service
-    depends_on:
-      - postgres
-      - config-server
-      - eureka-server
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/health_db
-      SPRING_DATASOURCE_USERNAME: user
-      SPRING_DATASOURCE_PASSWORD: password
-      SPRING_PROFILES_ACTIVE: default
-    ports:
-      - "8081:8080"
-
-  api-gateway:
-    build: ./api-gateway/api-gateway
-    container_name: api-gateway
-    depends_on:
-      - patient-service
-      - config-server
-      - eureka-server
-    environment:
-      SPRING_PROFILES_ACTIVE: default
-    ports:
-      - "8080:8080"
-
-volumes:
-  postgres_data:
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

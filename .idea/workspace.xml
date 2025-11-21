@@ -5,11 +5,105 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce707771-291b-4772-8634-3869b414402a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway/src/main/resources/bootstrap.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/classes/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/classes/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/classes/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/src/test/java/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/src/main/resources/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/src/test/java/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/src/main/resources/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/src/test/java/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/src/test/java/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/src/test/java/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/TEST-com.example.PatientServiceApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/TEST-com.example.service.ServiceApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/com.example.PatientServiceApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/com.example.service.ServiceApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/TEST-com.example.PatientServiceApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/TEST-com.example.service.ServiceApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/com.example.PatientServiceApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/com.example.service.ServiceApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/TEST-com.example.PatientServiceApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/TEST-com.example.service.ServiceApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/com.example.PatientServiceApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/com.example.service.ServiceApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/TEST-com.example.PatientServiceApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/TEST-com.example.service.ServiceApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/com.example.PatientServiceApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/com.example.service.ServiceApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/TEST-com.example.PatientServiceApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/TEST-com.example.service.ServiceApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/com.example.PatientServiceApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/classes/target/surefire-reports/com.example.service.ServiceApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/surefire-reports/TEST-com.example.PatientServiceApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/surefire-reports/TEST-com.example.service.ServiceApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/surefire-reports/com.example.PatientServiceApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/classes/target/surefire-reports/com.example.service.ServiceApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/surefire-reports/TEST-com.example.PatientServiceApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/surefire-reports/TEST-com.example.service.ServiceApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/surefire-reports/com.example.PatientServiceApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/classes/target/surefire-reports/com.example.service.ServiceApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/surefire-reports/TEST-com.example.PatientServiceApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/classes/target/surefire-reports/TEST-com.example.PatientServiceApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/surefire-reports/TEST-com.example.service.ServiceApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/classes/target/surefire-reports/TEST-com.example.service.ServiceApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/target/surefire-reports/com.example.service.ServiceApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/classes/target/surefire-reports/com.example.service.ServiceApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/surefire-reports/TEST-com.example.PatientServiceApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/surefire-reports/TEST-com.example.PatientServiceApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/surefire-reports/TEST-com.example.service.ServiceApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/surefire-reports/TEST-com.example.service.ServiceApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/surefire-reports/com.example.service.ServiceApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/surefire-reports/com.example.service.ServiceApplicationTests.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,14 +140,20 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;fix/flatten-modules&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/danish/Downloads/spring-projects/healthcare-microservices/config-server/pom.xml&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/danish/Downloads/spring-projects/healthcare-microservices/patient-service/src/test/java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/patient-service/src/test/java" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ce707771-291b-4772-8634-3869b414402a" name="Changes" comment="" />

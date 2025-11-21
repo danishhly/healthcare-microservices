@@ -1,6 +1,0 @@
-spring:
-  application:
-    name: patient-service
-  config:
-    # Remove 'optional:' to force the app to wait for the config server
-    import: "configserver:http://localhost:8889"

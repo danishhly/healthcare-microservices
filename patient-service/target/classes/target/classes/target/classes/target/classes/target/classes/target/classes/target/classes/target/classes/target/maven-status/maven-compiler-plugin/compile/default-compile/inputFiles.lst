@@ -1,8 +1,0 @@
-/home/danish/Downloads/spring-projects/healthcare-microservices/patient-service/src/main/java/com/example/PatientServiceApplication.java
-/home/danish/Downloads/spring-projects/healthcare-microservices/patient-service/src/main/java/com/example/controller/PatientController.java
-/home/danish/Downloads/spring-projects/healthcare-microservices/patient-service/src/main/java/com/example/exception/ErrorResponse.java
-/home/danish/Downloads/spring-projects/healthcare-microservices/patient-service/src/main/java/com/example/exception/GlobalExceptionHandler.java
-/home/danish/Downloads/spring-projects/healthcare-microservices/patient-service/src/main/java/com/example/exception/ResourceNotFoundException.java
-/home/danish/Downloads/spring-projects/healthcare-microservices/patient-service/src/main/java/com/example/model/Patient.java
-/home/danish/Downloads/spring-projects/healthcare-microservices/patient-service/src/main/java/com/example/repository/PatientRepository.java
-/home/danish/Downloads/spring-projects/healthcare-microservices/patient-service/src/main/java/com/example/service/PatientService.java
