@@ -118,3 +118,32 @@ bin/
 *.pid
 *.seed
 *.pid.lock
+
+# Git folder
+.git/
+
+# Multi-module maven builds
+**/target/
+
+# Maven wrapper (optional)
+.mvn/
+mvnw
+mvnw.cmd
+
+# IDE extra files
+**/.idea/
+**/.classpath
+**/.project
+
+# Logs
+**/*.log
+**/logs/
+
+# Frontend (if exists)
+**/node_modules/
+**/dist/
+**/build/
+
+# OS files
+Thumbs.db
+ehthumbs.db
