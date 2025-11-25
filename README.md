@@ -43,3 +43,21 @@ The easiest way to start the entire system is using Docker Compose.
 
 ```bash
 docker-compose up --build
+```
+
+This will spin up:
+
+* PostgreSQL database.
+* Eureka Server.
+* Config Server (loads configs from the local config-repo folder).
+* Patient Service.
+* API Gateway.
+
+### Option 2: Run Manually (Local Dev)
+If you want to run services individually via Maven, ensure you start them in this order:
+
+Config Server:
+```bash
+cd config-server
+./mvnw spring-boot:run
+```
