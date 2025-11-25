@@ -83,13 +83,13 @@ All requests should be routed through the API Gateway on port 8085.
 
 Patient Service Routes
 Base URL: http://localhost:8085/api/v1/patients
-```
-Method,Endpoint,Description,Payload
-GET,/,Get all patients,-
-GET,/{id},Get patient by ID,-
-POST,/,Create a new patient,JSON (see below)
-PUT,/{id},Update patient details,JSON
-DELETE,/{id},Delete a patient,-
+```bash
+Method,  Endpoint,  Description,  Payload
+GET,       /,       Get all patients,   -
+GET,     /{id},     Get patient by ID,  -
+POST,       /,      Create a new patient,  JSON (see below)
+PUT,     /{id},     Update patient details, JSON
+DELETE,  /{id},     Delete a patient,   -
 ```
 
 Sample JSON Payload for Creation:
