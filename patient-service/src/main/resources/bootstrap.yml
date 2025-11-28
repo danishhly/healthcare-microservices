@@ -1,8 +1,8 @@
 spring:
   application:
     name: patient-service
-  config:
-    import: optional:configserver:http://localhost:8888
+  #config:
+    #import: optional:configserver:http://localhost:8888
 
 eureka:
   client:

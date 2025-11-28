@@ -1,6 +1,21 @@
 server:
   port: 8085
 
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/health_db
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
 logging:
   level:
     org.springframework.web: INFO
