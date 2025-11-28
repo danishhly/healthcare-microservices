@@ -1,47 +1,28 @@
 server:
-  port: 8085
+  port: 8080
 
 spring:
-  main:
-    web-application-type: reactive
+  application:
+    name: api-gateway
+
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
           lower-case-service-id: true
-      default-filters:
-        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "*"
-            allowedHeaders: "*"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - PATCH
-              - DELETE
-              - OPTIONS
-            allowCredentials: false
+
       routes:
-        - id: patient-service-route
+        - id: patient-service
           uri: lb://patient-service
           predicates:
             - Path=/api/v1/patients/**
           filters:
-            - StripPrefix=2
+            - StripPrefix=1  # Removes `/api` prefix before sending to the service
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,metrics,prometheus
-  endpoint:
-    health:
-      show-details: always
-
-logging:
-  level:
-    org.springframework.cloud.gateway: INFO
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka/
+  instance:
+    prefer-ip-address: true
