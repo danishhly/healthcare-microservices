@@ -1,12 +1,15 @@
 spring:
   application:
-    name: api-gateway
+    name: patient-service
   config:
-    import: optional:configserver:http://localhost:8888
+    import: optional:configserver:http://config-server:8888
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8762/eureka/
+      defaultZone: http://eureka-server:8762/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
   instance:
     prefer-ip-address: true
