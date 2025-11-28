@@ -34,16 +34,6 @@ public class PatientController {
         return patientService.save(patient);
     }
 
-    @PutMapping("/{id}")
-    public Patient updatePatient(@PathVariable Long id, @Valid @RequestBody Patient patient) {
-        return patientService.update(id, patient);
-    }
-
-    @PatchMapping("/{id}")
-    public Patient partialUpdatePatient(@PathVariable Long id, @RequestBody Patient patient) {
-        return patientService.partialUpdate(id, patient);
-    }
-
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deletePatient(@PathVariable Long id) {
