@@ -4,21 +4,19 @@ server:
 spring:
   application:
     name: api-gateway
-
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
           lower-case-service-id: true
-
       routes:
         - id: patient-service
           uri: lb://patient-service
           predicates:
             - Path=/api/v1/patients/**
           filters:
-            - StripPrefix=1  # Removes `/api` prefix before sending to the service
+            - StripPrefix=1  
 
 eureka:
   client:
