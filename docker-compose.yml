@@ -1,17 +1,6 @@
 version: '3.8'
 
-services:
-  postgres:
-    image: postgres:15-alpine
-    container_name: postgres
-    environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: health_db
-    ports:
-      - "5433:5432"   # Use 5433 since Windows may have PostgreSQL installed
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
+
 
   eureka-server:
     build: ./eureka-server
